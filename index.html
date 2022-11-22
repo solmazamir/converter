@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Converter</title>
+</head>
+<body>
+    <h1>Valyuta Çeviricisi</h1>
+    <div class="main">
+
+        <div class="left">
+            <form class="first-select">
+               <div class="money-type money-type-1 active">RUB</div>
+               <div class="money-type money-type-1">EUR</div>
+               <div class="money-type money-type-1">USD</div>
+               <div class="money-type money-type-1">GBP</div>
+            </form>
+ 
+            <div class="input-area">
+               <input class="firstcurrency" type="number" placeholder="Dəyər daxil edin...">
+               <div>1 <span class="output-first span">AZN - </span> <span class="parity">?</span> <span class="output-second span">EUR</span></div>
+            </div>
+       </div>
+ 
+       <div class="right">
+         <form class="second-select">
+             <div class="money-type money-type-2">RUB</div>
+             <div class="money-type money-type-2 active">EUR</div>
+             <div class="money-type money-type-2">USD</div>
+             <div class="money-type money-type-2">GBP</div>
+         </form>
+ 
+         <div class="input-area">
+            <input class="output-result" type="text" disabled>
+             <div>1 <span class="output-second span">EUR - </span><span class="parity-two"> ? </span> <span class="output-first span"> AZN</span></div>
+          </div>
+     </div>
+
+    </div>
+      
+
+
+    <script src="ui.js"></script>
+    <script src="currency.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
