@@ -1,62 +1,322 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  padding: 0;
+  margin: 0;
 }
-.main{
-    width: 100%;
+input[type="radio"]:checked + label {
+  background-color: #833ae0;
+  color: white;
+}
+@media screen and (min-width: 320px) and (max-width: 800px) {
+  .ul {
+    display: none;
+  }
+  .ulRes {
+    display: none;
+  }
+  .icon-list {
+    position: absolute;
+    top: 5px;
+    right: 7.125vw;
+    color: white;
+    opacity: 0.3;
+    width: 5vw;
+    cursor: pointer;
+  }
+  .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: #f5f5f6;
     align-items: center;
-}
-
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:25px;
-}
-.left,
-.right{
-   width: 25%;
-   padding: 10px;
-   border-radius: 12px;
-}
-form{
-    display: flex;
-    width: 100%;
-    margin:15px 0;
-}
-form .money-type{
-    width: 25%;
+    height: auto;
+  }
+  .logo {
+    width: 20.814vw;
+    padding: 5px;
+    margin-right: 55.625vw;
+  }
+  ul li {
+    padding: 1.6vw;
     text-align: center;
-    color:#C6C6C6;
-    border:1px solid #C6C6C6;
-    background-color: #fff;
-    padding: 10px 5px;
-}
-.input-area{
-    width: 100%;
-    padding: 20px 0 5px 8px;
     display: flex;
-    flex-direction: column;
-    border:1px solid #c4c4c4
+    justify-content: center;
+  }
+  ul li a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vw;
+    line-height: 2vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #959ba4;
+  }
+  .login {
+    display: none;
+  }
+  h1 {
+    margin-top: 4.861vw;
+    display: flex;
+    justify-content: center;
+    height: 2.778vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6vw;
+    line-height: 3.646vw;
+    color: #000000;
+  }
+  .boxTitle {
+    width: 30vw;
+    height: 7vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    display: flex;
+    align-items: center;
+    color: #9f9f9f;
+  }
+  .boxTitle2 {
+    margin-top: 7vw;
+  }
+  .inputsContainer input {
+    display: none;
+  }
+  .inputsContainer {
+    display: flex;
+    width: 64.75vw;
+    height: 7.5vw;
+  }
+  .inputsContainer label {
+    display: flex;
+    width: 16.265vw;
+    height: 7.5vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #c6c6c6;
+    justify-content: center;
+    border: 0.25vw solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 0.75vw;
+    border-right: none;
+    cursor: pointer;
+  }
+  .inputsContainer label:last-child {
+    border-right: 0.25vw solid #e5e5e5;
+  }
+  .convertContainers {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vw;
+  }
+  .costContainer {
+    width: 64.75vw;
+    height: 25.5vw;
+    border: 0.25vw solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 0.75vw;
+    margin-top: 3.6vw;
+  }
+  .fromAmount,
+  .toAmount {
+    margin-top: 2.75vw;
+    margin-left: 3.5vw;
+    width: 56.25vw;
+    height: 9.5vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9vw;
+    line-height: 10.5vw;
+    color: #000000;
+    border: none;
+  }
+  .rate1,
+  .rate2 {
+    width: 29.75vw;
+    height: 7vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    display: flex;
+    align-items: center;
+    color: #c6c6c6;
+    margin-top: 5vw;
+    margin-left: 4vw;
+  }
+  .navbar ul li a:hover {
+    color: #000000;
+  }
 }
-.input-area input{
-    height: 40px;
-    font-size: 22px;
-    outline: none;
-    border:0;
-    margin-bottom: 15px;
-    background-color: #fff;
-}
-.active{
-    background-color: #833AE0 !important;
-    color:#fff !important;
-}
-.span{
-    margin: 0 2px;
+@media screen and (min-width: 800px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 4.34vw;
+    background-color: #f5f5f6;
+    align-items: center;
+  }
+  .logo {
+    width: 9.726vw;
+  }
+  .ul {
+    display: none;
+  }
+  ul li {
+    display: inline-block;
+    margin-left: 17.004px;
+  }
+  ul li a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4vw;
+    line-height: 12.995px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #959ba4;
+  }
+  .login {
+    width: 6.035vw;
+    height: 2.865vw;
+    background: #ffffff;
+    border-radius: 3.997px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5vw;
+    line-height: 12.995px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #000000;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  h1 {
+    margin-top: 7vw;
+    display: flex;
+    justify-content: center;
+    height: 4vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6vw;
+    line-height: 5.25vw;
+    color: #000000;
+  }
+  .boxTitle {
+    width: 15vw;
+    height: 3.501vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.75vw;
+    display: flex;
+    align-items: center;
+    color: #9f9f9f;
+  }
+  .inputsContainer input {
+    display: none;
+  }
+  .inputsContainer {
+    display: flex;
+    width: 32.376vw;
+    height: 3.75vw;
+  }
+  .inputsContainer label {
+    display: flex;
+    width: 8.133vw;
+    height: 3.75vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #c6c6c6;
+    justify-content: center;
+    border: 0.125vw solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 0.374vw;
+    border-right: none;
+    cursor: pointer;
+  }
+  .inputsContainer label:last-child {
+    border-right: 0.125vw solid #e5e5e5;
+  }
+  .input-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4.126vw;
+  }
+  .costContainer {
+    width: 32.376vw;
+    height: 12.75vw;
+    border: 0.125vw solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 0.374vw;
+    margin-top: 2.5vw;
+  }
+  .fromAmount,
+  .toAmount {
+    margin-top: 1.375vw;
+    margin-left: 1.75vw;
+    width: 28.125vw;
+    height: 4.75vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.5vw;
+    line-height: 5.25vw;
+    color: #000000;
+    border: none;
+  }
+  .rate1,
+  .rate2 {
+    width: 14.875vw;
+    height: 3.501vw;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.75vw;
+    display: flex;
+    align-items: center;
+    color: #c6c6c6;
+    margin-top: 2.5vw;
+    margin-left: 2vw;
+  }
+  .navbar ul li a:hover {
+    color: #000000;
+  }
+  .icon-list {
+    display: none;
+  }
 }
